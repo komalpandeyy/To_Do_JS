@@ -46,6 +46,22 @@ btn.addEventListener("click",function(){
         }
     })
 
+    f = document.getElementById('filter');
+    f.addEventListener("input",function(e){
+    searchItem = e.target.value.toLowerCase();
+    let list = document.getElementsByClassName('form-check-label');
+    //console.log(list);
+    for(i =0;i<list.length;i++){
+        if(list[i].innerText.trim().toLowerCase().indexOf(searchItem)!=-1){
+            list[i].parentNode.style.display = "block";
+            // console.log("hi");
+        }
+        else{
+            list[i].parentNode.style.display="none";
+        }
+    }
+})
+
     }
 }
 );
@@ -79,3 +95,19 @@ t[i].addEventListener("click",function(){
     }
 })
 }
+
+f = document.getElementById('filter');
+f.addEventListener("input",function(e){
+    searchItem = e.target.value.toLowerCase();
+    let list = document.getElementsByClassName('form-check-label');
+    //console.log(list);
+    for(i =0;i<list.length;i++){
+        if(list[i].innerText.trim().toLowerCase().indexOf(searchItem)!=-1){
+            list[i].parentNode.style.display = "block";
+             console.log("hi");
+        }
+        else{
+            list[i].parentNode.style.display="none";
+        }
+    }
+})
